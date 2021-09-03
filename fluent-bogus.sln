@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBogus", "FluentBogus\FluentBogus.csproj", "{57B3EA93-785B-4B49-AE13-4E7DD5C1078E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBogus.Tests", "FluentBogus.Tests\FluentBogus.Tests.csproj", "{54BE870B-F0C3-4D44-A248-2F755C2CD056}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57B3EA93-785B-4B49-AE13-4E7DD5C1078E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B3EA93-785B-4B49-AE13-4E7DD5C1078E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B3EA93-785B-4B49-AE13-4E7DD5C1078E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B3EA93-785B-4B49-AE13-4E7DD5C1078E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BE870B-F0C3-4D44-A248-2F755C2CD056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BE870B-F0C3-4D44-A248-2F755C2CD056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BE870B-F0C3-4D44-A248-2F755C2CD056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BE870B-F0C3-4D44-A248-2F755C2CD056}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {71C4237A-2618-4360-B103-7C18BB357DE6}
+	EndGlobalSection
+EndGlobal
