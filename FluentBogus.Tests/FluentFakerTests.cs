@@ -1,5 +1,5 @@
 using FluentAssertions;
-using FluentBogus.Tests.Models;
+using FluentBogus.Tests.FakeBuilders;
 using NUnit.Framework;
 using System.Collections.Generic;
 using System.Reflection;
@@ -25,11 +25,14 @@ namespace FluentBogus.Tests
         public void ShouldCreateFakeObjectWithNavigationProperties()
         {
             var count = 3;
-            var usersFaker = new FluentFaker<User>()
-                .Include(u => u.Company.BillingAddress)
-                .Include(u => u.Company.Departments);
+            var password = "Pa$$wOrd!";
 
-            var users = usersFaker.BuildMany(count);
+            var users = new UserFaker()
+                .WithPassword(password)
+                .Include(u => u.Company.BillingAddress)
+                .Include(u => u.Company.Departments)
+                .BuildMany(count);
+
             users.Should().NotBeNull();
             users.Should().HaveCount(count);
 
@@ -37,6 +40,7 @@ namespace FluentBogus.Tests
             {
                 user.Id.Should().BeGreaterThan(0);
                 user.FirstName.Should().NotBeNullOrEmpty();
+                user.Password.Should().Be(password);
 
                 user.Company.Should().NotBeNull();
                 user.Company.Id.Should().BeGreaterThan(0);

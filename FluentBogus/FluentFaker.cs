@@ -105,32 +105,12 @@ namespace FluentBogus
 
         public virtual T Build()
         {
-            CopyRootFakerRules();
             return BuildInternal();
         }
 
         public virtual List<T> BuildMany(int count = 1)
         {
-            CopyRootFakerRules();
             return BuildManyInternal(count);
-        }
-
-        private void CopyRootFakerRules()
-        {
-            FluentFaker.FakeBuilders.TryGetValue(typeof(T), out var builderType);
-
-            if (builderType == null)
-            {
-                return;
-            }
-
-            var fakeBuilder = Activator.CreateInstance(builderType);
-            if (fakeBuilder == null)
-            {
-                return;
-            }
-
-            Faker = ((FluentFaker<T>)fakeBuilder).Faker;
         }
 
         private T BuildInternal()
@@ -246,7 +226,7 @@ namespace FluentBogus
             }
         }
 
-        public TBuilder AsBuilder<TBuilder>() where TBuilder : FluentFaker<T>
+        public TBuilder AsFaker<TBuilder>() where TBuilder : FluentFaker<T>
         {
             return (TBuilder)this;
         }

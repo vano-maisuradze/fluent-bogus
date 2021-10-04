@@ -2,9 +2,9 @@
 
 namespace FluentBogus.Tests.FakeBuilders
 {
-    public class DepartmentBuilder : FluentFaker<Department>
+    public class DepartmentFaker : FluentFaker<Department>
     {
-        public DepartmentBuilder()
+        public DepartmentFaker()
         {
             Faker.RuleFor(u => u.Name, f => f.Person.Company.Name);
         }
