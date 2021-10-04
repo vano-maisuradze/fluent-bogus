@@ -1,5 +1,5 @@
 # fluent-bogus
-Bogus based fake object generator using fluent syntax
+[Bogus](https://github.com/bchavez/Bogus) based fake object generator using fluent syntax
 
 
 
