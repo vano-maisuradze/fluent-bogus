@@ -2,8 +2,14 @@
 [Bogus](https://github.com/bchavez/Bogus) based fake object generator using fluent syntax
 
 
+## Download & Install
+Nuget Package [FluentBogus](https://www.nuget.org/packages/FluentBogus)
 
-### Usage example:
+```powershell
+Install-Package FluentBogus
+```
+Usage example
+-------------
 
 #### Generate a fake object:
 ```csharp
