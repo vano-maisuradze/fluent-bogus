@@ -2,10 +2,24 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Vano Maisuradze</Authors>
+    <PackageProjectUrl>https://github.com/vano-maisuradze/fluent-bogus</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vano-maisuradze/fluent-bogus</RepositoryUrl>
+    <PackageTags>fluent fake faker generator seed bogus test testing tdd .net</PackageTags>
+    <Description>Bogus based fake object generator, using fluent syntax.</Description>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Bogus" Version="33.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
